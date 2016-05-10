@@ -1,0 +1,48 @@
+{
+  "name": "gisthrower",
+  "version": "1.0.0",
+  "description": "Basic Gist CLI Client",
+  "bin": {
+    "gisthrower" : "./src/cli.js"
+  },
+  "main": "src/cli.js",
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardoarnold/gisthrower.git"
+  },
+  "keywords": [
+    "gist",
+    "oauth",
+    "tweet",
+    "cli",
+    "github"
+  ],
+  "author": "Eduardo Arnold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eduardoarnold/gisthrower/issues"
+  },
+  "homepage": "https://github.com/eduardoarnold/gisthrower#readme",
+  "devDependencies": {
+    "app-root-path": "^1.0.0",
+    "chai": "^3.5.0",
+    "codecov": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-util": "^3.0.7",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
+    "supertest": "^1.2.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0"
+  }
+}
