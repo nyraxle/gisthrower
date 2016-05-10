@@ -31,3 +31,13 @@ $ gisthrower
 - nodemon.json has been added to avoid nodemon ignoring our private node_modules
   - see: [overriding the underlying default ignore rules](https://github.com/remy/nodemon/blob/master/faq.md#overriding-the-underlying-default-ignore-rules)
 - codecov and travis integration as [this example](https://github.com/codecov/example-node)
+
+### authauth
+
+- github authentication using [Personal Access Token](https://developer.github.com/v3/auth/)
+- http://stackoverflow.com/questions/5643321/how-to-make-remote-rest-call-inside-node-js-any-curl
+- https://nodejs.org/api/http.html#http_http_request_options_callback
+- https://developer.github.com/guides/basics-of-authentication/
+- https://github.com/request/request
+- https://developer.github.com/v3/gists/
+- https://nodejs.org/docs/v0.5.2/api/http.html#http.request
