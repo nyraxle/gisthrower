@@ -1,6 +1,7 @@
 # node survey kit specific ignore
 # Dependency directories
 /node_modules
+/auth.json
 
 # Created by https://www.gitignore.io/api/node,monodevelop,visualstudio,visualstudiocode,sublimetext,grunt,osx,linux,windows
 
