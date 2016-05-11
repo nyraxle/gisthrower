@@ -3,13 +3,13 @@
 
 const program = require('commander');
 
-const params = require('gisthrower-params');
-const args = params.args;
-const resolver = params.resolver;
+const resolver = require('gisthrower-resolver');
 
 program
-  .version('0.0.1')
-  .command(args.command.AUTHENTICATION)
+  .version('0.0.1');
+
+program
+  .command('authenticate <username> <token>', 'Persist github personal token locally')
   .action(resolver.authenticate);
 
 program.parse(process.argv);
