@@ -3,18 +3,23 @@
 
 const program = require('commander');
 const resolver = require('gisthrower-resolver');
-const string = require('gisthrower-infrastructure').string;
+const infrastructure = require('gisthrower-infrastructure');
+const appRoot = require('app-root-path');
+const credentials = require('gisthrower-auth').credentials;
 
 if (!String.prototype.format) {
-  String.prototype.format = string.format;
+  String.prototype.format = infrastructure.string.format;
 }
+
+const path = appRoot.path + '\\auth.json';
+infrastructure.json.checkFileOnFirstRun(path);
 
 program
   .version('0.0.1');
 
 program
-  .command('auth <username> <token>', 'Persist github personal token locally')
-  .action(resolver.authenticate);
+  .command('authenticate <username> <token>', 'Persist github personal token locally')
+  .action(credentials.setCredentials);
 
 program
   .command('list')
