@@ -3,6 +3,11 @@
 
 const program = require('commander');
 const resolver = require('gisthrower-resolver');
+const string = require('gisthrower-infrastructure').string;
+
+if (!String.prototype.format) {
+  String.prototype.format = string.format;
+}
 
 program
   .version('0.0.1');
