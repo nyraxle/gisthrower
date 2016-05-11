@@ -19,8 +19,9 @@ program
 program
   .command('list')
   .alias('ls')
-  .description('List all gists')
-  .option("-a, --all", "All")
+  .description('List all gists (--all option does the same)')
+  .option("-a, --all", "List all gists")
+  .option("-s --starred", "List only the starred gists from user")
   .action(resolver.list);
 
 program.parse(process.argv);
