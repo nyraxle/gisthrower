@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/eduardoarnold/gisthrower.svg?branch=master)](https://travis-ci.org/eduardoarnold/gisthrower) [![codecov](https://codecov.io/gh/eduardoarnold/gisthrower/branch/master/graph/badge.svg)](https://codecov.io/gh/eduardoarnold/gisthrower) [![Dependency Status](https://david-dm.org/eduardoarnold/gisthrower.svg)](https://david-dm.org/eduardoarnold/gisthrower)
+
+
 ## Gisthrower
 NodeJS CLI to easy create and manage gists
 
@@ -25,8 +28,9 @@ $ gisthrower --from-user <targetuser> # List all from targetuser
 ```
 
 # Roadmap
-- [ ] Test coverage
-- [ ] Apply on Travis.ci
+- [ ] 100% coverage
+
+- [x] Apply on Travis.ci
 - [ ] Show dependencies
 - [ ] Get details from a single gist
 - [ ] Point files to include on gist (fs IO)
