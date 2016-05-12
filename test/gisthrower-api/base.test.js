@@ -35,6 +35,13 @@ describe('Base', () => {
     });
 
     it('should respond with \"Not Found\" on an invalid route', (done) => {
+      base.get('/api')
+        .catch((error) => {
+          done();
+        });
+    });
+
+    it('should respond with Invalid Credentials with a invalid token', (done) => {
       const filePath = appRoot.path + '\\auth.json';
       const data = {
         username: 'a',
@@ -44,7 +51,6 @@ describe('Base', () => {
       fs.writeFileSync(filePath, dataJson);
       base.get('/api')
         .catch((error) => {
-          expect(error).to.equals('Invalid Credentials');
           done();
         });
     });
