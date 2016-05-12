@@ -29,6 +29,14 @@ program
   .option('-a, --all', 'List all gists')
   .option('-s --starred', 'List only the starred gists from user')
   .option('-f --from-user <username>', 'List all gists from user')
-  .action(resolver.list);
+  .action((options) => {
+    if (options.starred) {
+      resolver.list.starred();
+    } else if (options.fromUser) {
+      resolver.list.fromUser(options.fromUser);
+    } else {
+      resolver.list.all();
+    }
+  });
 
 program.parse(process.argv);
