@@ -1,6 +1,8 @@
 ## Gisthrower
 NodeJS CLI to easy create and manage gists
 
+ :shipit: Feel free to contribute :shipit:
+
 ### CLI
 ```sh
 $ gulp lint # lint the code using avaiable es6 features*
