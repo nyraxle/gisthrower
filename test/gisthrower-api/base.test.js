@@ -33,5 +33,20 @@ describe('Base', () => {
           done();
         });
     });
+
+    it('should respond with \"Not Found\" on an invalid route', (done) => {
+      const filePath = appRoot.path + '\\auth.json';
+      const data = {
+        username: 'a',
+        token: 'b'
+      };
+      const dataJson = JSON.stringify(data);
+      fs.writeFileSync(filePath, dataJson);
+      base.get('/api')
+        .catch((error) => {
+          expect(error).to.equals('Invalid Credentials');
+          done();
+        });
+    });
   });
 });
