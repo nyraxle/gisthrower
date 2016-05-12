@@ -4,8 +4,6 @@
 const program = require('commander');
 const resolver = require('gisthrower-resolver');
 const infrastructure = require('gisthrower-infrastructure');
-
-const appRoot = require('app-root-path');
 const credentials = require('gisthrower-auth').credentials;
 
 if (!String.prototype.format) {
@@ -21,7 +19,6 @@ program
 program
   .command('<username> <token>', 'Persist github personal token locally')
   .action((username, token) => {
-    const path = appRoot.path + '\\auth.json';
     credentials.setCredentials(username, token);
   });
 
