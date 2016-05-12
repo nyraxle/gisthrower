@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/eduardoarnold/gisthrower.svg?branch=master)](https://travis-ci.org/eduardoarnold/gisthrower) [![codecov](https://codecov.io/gh/eduardoarnold/gisthrower/branch/master/graph/badge.svg)](https://codecov.io/gh/eduardoarnold/gisthrower) [![Dependency Status](https://david-dm.org/eduardoarnold/gisthrower.svg)](https://david-dm.org/eduardoarnold/gisthrower)
+[![Build Status](https://travis-ci.org/eduardoarnold/gisthrower.svg?branch=master)](https://travis-ci.org/eduardoarnold/gisthrower) [![codecov](https://codecov.io/gh/eduardoarnold/gisthrower/branch/master/graph/badge.svg)](https://codecov.io/gh/eduardoarnold/gisthrower) [![Dependency Status](https://david-dm.org/eduardoarnold/gisthrower.svg)](https://david-dm.org/eduardoarnold/gisthrower) [![Node Version](https://img.shields.io/badge/node-5.9.x-blue.svg)]()
 
 
 ## Gisthrower
