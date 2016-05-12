@@ -1,6 +1,6 @@
 {
   "name": "gisthrower",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Basic Gist CLI Client",
   "bin": {
     "gisthrower": "./src/cli.js"
