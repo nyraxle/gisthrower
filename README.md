@@ -20,7 +20,7 @@ $ npm link # create the symlink to gisthrower command (bind to development/code 
 ### CLI (The Gisthrower one)
 ```sh
 $ gisthrower # equivalent to --help
-$ gisthrower <user> <token> # Save your git personal token
+$ gisthrower --auth|-a <username>:<token> # Save your git personal token
 $ gisthrower --help # Help
 $ gisthrower --list|-ls # list all gists from your user
 $ gisthrower --starred|-s # List all starred gists from your user
