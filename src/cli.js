@@ -60,8 +60,12 @@ program
   .command('gist <id>')
   .alias('gs')
   .description('Details about a single gist based on his <id>')
-  .action((id) => {
+  .option('--download-files')
+  .action((id, options) => {
     resolver.gist.basic(id);
+    if (options.downloadFiles) {
+      resolver.gist.downloadFiles(id);
+    }
   });
 
 program.parse(process.argv);
