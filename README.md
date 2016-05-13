@@ -22,9 +22,10 @@ $ npm link # create the symlink to gisthrower command (bind to development/code 
 $ gisthrower # equivalent to --help
 $ gisthrower --auth|-a <username>:<token> # Save your git personal token
 $ gisthrower --help # Help
-$ gisthrower --list|-ls # list all gists from your user
-$ gisthrower --starred|-s # List all starred gists from your user
-$ gisthrower --from-user <targetuser> # List all from targetuser
+$ gisthrower list --all|-a # list all gists from your user
+$ gisthrower list --starred|-s # List all starred gists from your user
+$ gisthrower list --from-user <targetuser> # List all from targetuser
+$ gisthrower list --range <from>:<to> # List all gists based on previous listed numbers
 ```
 
 # Roadmap
