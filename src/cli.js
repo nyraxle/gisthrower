@@ -16,11 +16,17 @@ infrastructure.json.checkFileOnFirstRun(path);
 program
   .version('0.0.1');
 
+
+var authenticationDataSplit = (val) => {
+  var splittedData = val.split(':');
+  return {
+    username: splittedData[0],
+    token: splittedData[1]
+  }
+};
 program
-  .command('<username> <token>', 'Persist github personal token locally')
-  .action((username, token) => {
-    credentials.setCredentials(username, token);
-  });
+  .option('-a --auth <a>:<b>', 'Persist github personal token locally', authenticationDataSplit);
+
 
 program
   .command('list')
@@ -40,3 +46,7 @@ program
   });
 
 program.parse(process.argv);
+
+if (program.auth) {
+  credentials.setCredentials(program.auth.username, program.auth.token);
+}
