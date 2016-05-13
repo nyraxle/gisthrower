@@ -13,6 +13,12 @@ const chunk = {
 }
 
 describe('Message Mapper', () => {
+  before(function() {
+    if (!String.prototype.format) {
+      String.prototype.format = stringpollyfill.format;
+    }
+  });
+
   it ('should export an object', () => {
     expect(messageMapper).to.be.an('Object');
   });
@@ -24,11 +30,17 @@ describe('Message Mapper', () => {
   });
 
   describe('gistInformations', () => {
-    it('should return a formatted string when i input a raw gist information', () => {
+    it('should return a formatted string when inputed a raw gist information', () => {
+      expect(messageMapper.gistInformations(chunk)).to.be.a('string');
+    });
+  });
+
+  describe('gistBasicDetails', () => {
+    it('should return a formatted with gist details when inputed a raw gist information', () => {
       if (!String.prototype.format) {
         String.prototype.format = stringpollyfill.format;
       }
-      expect(messageMapper.gistInformations(chunk)).to.be.a('string');
+      expect(messageMapper.gistBasicDetails(chunk)).to.be.a('string');
     });
   });
 });
