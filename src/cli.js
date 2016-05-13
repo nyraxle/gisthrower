@@ -16,11 +16,25 @@ infrastructure.json.checkFileOnFirstRun(path);
 program
   .version('0.0.1');
 
+
+const authenticationDataSplit = (val) => {
+  const splittedData = val.split(':');
+  return {
+    username: splittedData[0],
+    token: splittedData[1]
+  };
+};
 program
-  .command('<username> <token>', 'Persist github personal token locally')
-  .action((username, token) => {
-    credentials.setCredentials(username, token);
-  });
+  .option('-a --auth <username>:<token>', 'Persist github personal token locally', authenticationDataSplit);
+
+
+const range = (val) => {
+  const splittedData = val.split(':').map(Number);
+  return {
+    from: splittedData[0],
+    to: splittedData[1]
+  };
+};
 
 program
   .command('list')
@@ -29,6 +43,21 @@ program
   .option('-a, --all', 'List all gists')
   .option('-s --starred', 'List only the starred gists from user')
   .option('-f --from-user <username>', 'List all gists from user')
-  .action(resolver.list);
+  .option('-r --range <from>-<to>', 'List all gists into a given range, based on list displayed gist number', range)
+  .action((options) => {
+    if (options.starred) {
+      resolver.list.starred();
+    } else if (options.fromUser) {
+      resolver.list.fromUser(options.fromUser);
+    } else if (options.range) {
+      resolver.list.range(options.range.from, options.range.to);
+    } else {
+      resolver.list.all();
+    }
+  });
 
 program.parse(process.argv);
+
+if (program.auth) {
+  credentials.setCredentials(program.auth.username, program.auth.token);
+}

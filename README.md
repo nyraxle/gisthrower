@@ -20,18 +20,15 @@ $ npm link # create the symlink to gisthrower command (bind to development/code 
 ### CLI (The Gisthrower one)
 ```sh
 $ gisthrower # equivalent to --help
-$ gisthrower <user> <token> # Save your git personal token
+$ gisthrower --auth|-a <username>:<token> # Save your git personal token
 $ gisthrower --help # Help
-$ gisthrower --list|-ls # list all gists from your user
-$ gisthrower --starred|-s # List all starred gists from your user
-$ gisthrower --from-user <targetuser> # List all from targetuser
+$ gisthrower list --all|-a # list all gists from your user
+$ gisthrower list --starred|-s # List all starred gists from your user
+$ gisthrower list --from-user <targetuser> # List all from targetuser
+$ gisthrower list --range <from>:<to> # List all gists based on previous listed numbers
 ```
 
 # Roadmap
-- [ ] 100% coverage
-
-- [x] Apply on Travis.ci
-- [ ] Show dependencies
 - [ ] Get details from a single gist
 - [ ] Point files to include on gist (fs IO)
 - [ ] Create Gists
@@ -39,6 +36,9 @@ $ gisthrower --from-user <targetuser> # List all from targetuser
 - [ ] Delete Gists
 - [ ] Star Gists
 - [ ] Unstar Gists
+- [X] Show dependencies
+- [x] 100% coverage
+- [x] Apply on Travis.ci
 
 `notes`
 - [Github api v3](https://developer.github.com/v3/gists/)
