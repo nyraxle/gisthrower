@@ -50,7 +50,7 @@ describe('List API', () => {
     });
   });
 
-  describe('all', () => {
+  describe('allFromUser', () => {
     it('should respond with a chunk of gists from eduardoarnold', (done) => {
       listApi.fromUser('eduardoarnold')
         .then((result) => {
