@@ -56,13 +56,13 @@ program
     }
   });
 
-  program
-    .command('gist <id>')
-    .alias('gs')
-    .description('Details about a single gist based on his <id>')
-    .action((id, options) => {
-      resolver.gist.basic(id);
-    });
+program
+  .command('gist <id>')
+  .alias('gs')
+  .description('Details about a single gist based on his <id>')
+  .action((id) => {
+    resolver.gist.basic(id);
+  });
 
 program.parse(process.argv);
 
