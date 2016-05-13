@@ -29,10 +29,6 @@ $ gisthrower list --range <from>:<to> # List all gists based on previous listed 
 ```
 
 # Roadmap
-- [ ] 100% coverage
-
-- [x] Apply on Travis.ci
-- [ ] Show dependencies
 - [ ] Get details from a single gist
 - [ ] Point files to include on gist (fs IO)
 - [ ] Create Gists
@@ -40,6 +36,9 @@ $ gisthrower list --range <from>:<to> # List all gists based on previous listed 
 - [ ] Delete Gists
 - [ ] Star Gists
 - [ ] Unstar Gists
+- [X] Show dependencies
+- [x] 100% coverage
+- [x] Apply on Travis.ci
 
 `notes`
 - [Github api v3](https://developer.github.com/v3/gists/)
