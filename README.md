@@ -45,6 +45,7 @@ Usage:
 
 Options:
     --download-files, -d     <destination>         Download all files from a gist to a given destination folder
+             --clone, -c     <destination>         Clone your gist repository to a given repository
 ```
 
 ### Development
@@ -59,7 +60,7 @@ $ npm test          # run codecoverage
 #### TODO
 ```
 TODO:
--  Clone gist repository to a local folder
+-  Fix sub-command help options
 -  Point files to include on gist (fs IO)
 -  Create Gists
 -  Edit Gists
@@ -70,10 +71,11 @@ TODO:
 ```
 ```
 DONE:
-- Get details from a single gist
-- Show dependencies
-- 100% coverage
-- Apply on Travis.ci
+-  Clone gist repository to a local folder
+-  Get details from a single gist
+-  Show dependencies
+-  100% coverage
+-  Apply on Travis.ci
 ```
 
 `notes`

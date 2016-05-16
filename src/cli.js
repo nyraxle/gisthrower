@@ -14,7 +14,7 @@ const path = credentials.filePath;
 infrastructure.json.checkFileOnFirstRun(path);
 
 program
-  .version('0.2.1');
+  .version('0.3.0');
 
 
 const authenticationDataSplit = (val) => {
@@ -60,11 +60,14 @@ program
   .command('gist <id>')
   .alias('gs')
   .description('Details about a single gist based on his <id>')
-  .option('--download-files <dest>')
+  .option('-d --download-files <dest>', 'Download all gist files to a given destination')
+  .option('-c --clone <dest>', 'Clone gist repository to a given destination')
   .action((id, options) => {
     resolver.gist.basic(id);
     if (options.downloadFiles) {
       resolver.gist.downloadFiles(id, options.downloadFiles);
+    } else if (options.clone) {
+      resolver.gist.clone(id, options.clone);
     }
   });
 
