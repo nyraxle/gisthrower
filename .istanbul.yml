@@ -1,4 +1,4 @@
 instrumentation:
     root: ./src/node_modules
     include-all-sources: true
-    excludes: ["index.js", "cli.js", "list.js"]
+    excludes: ["index.js", "cli.js", "list.js", "gist.js"]
