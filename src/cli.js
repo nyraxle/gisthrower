@@ -39,7 +39,7 @@ const range = (val) => {
 program
   .command('list')
   .alias('ls')
-  .description('List all gists (--all option does the same)')
+  .description('List operations on gists')
   .option('-a, --all', 'List all gists')
   .option('-s --starred', 'List only the starred gists from user')
   .option('-f --from-user <username>', 'List all gists from user')
@@ -53,6 +53,18 @@ program
       resolver.list.range(options.range.from, options.range.to);
     } else {
       resolver.list.all();
+    }
+  });
+
+program
+  .command('gist <id>')
+  .alias('gs')
+  .description('Details about a single gist based on his <id>')
+  .option('--download-files <dest>')
+  .action((id, options) => {
+    resolver.gist.basic(id);
+    if (options.downloadFiles) {
+      resolver.gist.downloadFiles(id, options.downloadFiles);
     }
   });
 
