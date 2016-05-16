@@ -60,6 +60,7 @@ $ npm test          # run codecoverage
 #### TODO
 ```
 TODO:
+-  Fix sub-command help options
 -  Point files to include on gist (fs IO)
 -  Create Gists
 -  Edit Gists
