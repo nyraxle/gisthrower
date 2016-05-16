@@ -1,44 +1,86 @@
 [![Build Status](https://travis-ci.org/eduardoarnold/gisthrower.svg?branch=master)](https://travis-ci.org/eduardoarnold/gisthrower) [![codecov](https://codecov.io/gh/eduardoarnold/gisthrower/branch/master/graph/badge.svg)](https://codecov.io/gh/eduardoarnold/gisthrower) [![Dependency Status](https://david-dm.org/eduardoarnold/gisthrower.svg)](https://david-dm.org/eduardoarnold/gisthrower) [![Node Version](https://img.shields.io/badge/node-5.9.x-blue.svg)]()
 
 
-## Gisthrower
-NodeJS CLI to easy create and manage gists
+# Gisthrower - A minimalist CLI to manage gists
+> Manage your gists from command line using Personal access tokens from GitHub
 
- :shipit: Feel free to contribute :shipit:
+---
 
-### CLI
+## Install
+```sh
+$ npm install -g gisthrower
+```
+
+## Usage
+
+```
+Usage: gisthrower [command] <parameter> {OPTIONS} <parameters>
+
+Standard Options:
+    --version, -v                    Get versions of package
+       --help, -h                    Get CLI help
+       --auth, -a  <user>:<token>    Save personal access token and username
+
+Commands:
+             list                    List gists
+             gist  <id>              Get details from a single gist based on his <id>
+```
+
+```
+List command:
+
+List
+Usage:
+                    list  {OPTIONS}
+
+Options:
+               --all, -a                           List all gists from current saved user/token
+           --starred, -s                           List only starred gists
+         --from-user, -f     <username>            List all public gists from specific user
+              --rage, -r     <from>-<to>           List all gists in a given rage (index list based)
+
+Gist
+Usage:
+                    gist     <id>                  Get details from a single gist
+
+Options:
+    --download-files, -d     <destination>         Download all files from a gist to a given destination folder
+```
+
+```
+
 ```sh
 $ gulp lint # lint the code using avaiable es6 features*
 ```
 
-### CLI (The DEV one)
+### Development
 ```sh
-$ npm install -g # globally installs the gisthrower (to run commands)
-$ npm link # create the symlink to gisthrower command (bind to development/code local repository)
-```
-
-### CLI (The Gisthrower one)
-```sh
-$ gisthrower # equivalent to --help
-$ gisthrower --auth|-a <username>:<token> # Save your git personal token
-$ gisthrower --help # Help
-$ gisthrower list --all|-a # list all gists from your user
-$ gisthrower list --starred|-s # List all starred gists from your user
-$ gisthrower list --from-user <targetuser> # List all from targetuser
-$ gisthrower list --range <from>:<to> # List all gists based on previous listed numbers
+$ npm link          # create the symlink to gisthrower command to your working folder
+$ gulp test:mocha   # run mocha tests
+$ gulp lint         # run eslint
+$ npm test          # run codecoverage
 ```
 
 # Roadmap
-- [ ] Get details from a single gist
-- [ ] Point files to include on gist (fs IO)
-- [ ] Create Gists
-- [ ] Edit Gists
-- [ ] Delete Gists
-- [ ] Star Gists
-- [ ] Unstar Gists
-- [X] Show dependencies
-- [x] 100% coverage
-- [x] Apply on Travis.ci
+#### TODO
+```
+TODO:
+-  Clone gist repository to a local folder
+-  Point files to include on gist (fs IO)
+-  Create Gists
+-  Edit Gists
+-  Delete Gists
+-  Create release notes
+-  Star Gists
+-  Unstar Gists
+```
+```
+DONE:
+- Get details from a single gist
+- Show dependencies
+- 100% coverage
+- Apply on Travis.ci
+```
 
 `notes`
 - [Github api v3](https://developer.github.com/v3/gists/)
