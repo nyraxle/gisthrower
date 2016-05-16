@@ -47,17 +47,11 @@ Options:
     --download-files, -d     <destination>         Download all files from a gist to a given destination folder
 ```
 
-```
-
-```sh
-$ gulp lint # lint the code using avaiable es6 features*
-```
-
 ### Development
 ```sh
 $ npm link          # create the symlink to gisthrower command to your working folder
 $ gulp test:mocha   # run mocha tests
-$ gulp lint         # run eslint
+$ gulp lint         # lint the code using avaiable es6 features*
 $ npm test          # run codecoverage
 ```
 
