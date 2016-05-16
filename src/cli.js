@@ -60,11 +60,14 @@ program
   .command('gist <id>')
   .alias('gs')
   .description('Details about a single gist based on his <id>')
-  .option('--download-files <dest>')
+  .option('-d --download-files <dest>')
+  .option('-c --clone <dest>')
   .action((id, options) => {
     resolver.gist.basic(id);
     if (options.downloadFiles) {
       resolver.gist.downloadFiles(id, options.downloadFiles);
+    } else if (options.clone) {
+      resolver.gist.clone(id, options.clone);
     }
   });
 
