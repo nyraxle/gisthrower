@@ -62,12 +62,15 @@ program
   .description('Details about a single gist based on his <id>')
   .option('-d --download-files <dest>', 'Download all gist files to a given destination')
   .option('-c --clone <dest>', 'Clone gist repository to a given destination')
+  .option('-m --more', 'Show gist informations/details')
   .action((id, options) => {
     resolver.gist.basic(id);
     if (options.downloadFiles) {
       resolver.gist.downloadFiles(id, options.downloadFiles);
     } else if (options.clone) {
       resolver.gist.clone(id, options.clone);
+    } else if (options.more) {
+      resolver.gist.moreDetails(id);
     }
   });
 

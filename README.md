@@ -46,6 +46,7 @@ Usage:
 Options:
     --download-files, -d     <destination>         Download all files from a gist to a given destination folder
              --clone, -c     <destination>         Clone your gist repository to a given repository
+              --more, -m                           Get detailed informations about referenced gist
 ```
 
 ### Development
@@ -60,9 +61,10 @@ $ npm test          # run codecoverage
 #### TODO
 ```
 TODO:
--  Fix sub-command help options
--  Point files to include on gist (fs IO)
+-  Open a referenced gist on default system browser
 -  Create Gists
+-  Point files to include on gist (fs IO)
+-  Create a version history file
 -  Edit Gists
 -  Delete Gists
 -  Create release notes
@@ -71,6 +73,7 @@ TODO:
 ```
 ```
 DONE:
+-  Get detailed informations about a single gist
 -  Clone gist repository to a local folder
 -  Get details from a single gist
 -  Show dependencies
