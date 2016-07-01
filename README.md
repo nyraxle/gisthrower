@@ -57,6 +57,11 @@ $ gulp lint         # lint the code using avaiable es6 features*
 $ npm test          # run codecoverage
 ```
 
+Test User Environment **_process.env_**
+
+- `TEST_USER`: valid github user
+- `TEST_USER`: valid github token
+
 # Roadmap
 #### TODO
 ```
