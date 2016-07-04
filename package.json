@@ -1,6 +1,6 @@
 {
   "name": "gisthrower",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Basic Gist CLI Client",
   "bin": {
     "gisthrower": "./src/cli.js"
@@ -44,6 +44,7 @@
     "commander": "^2.9.0",
     "download": "^4.4.3",
     "nodegit": "^0.13.0",
+    "open": "0.0.5",
     "q": "^1.4.1",
     "request-promise": "^3.0.0"
   }
