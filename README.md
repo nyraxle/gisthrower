@@ -47,6 +47,7 @@ Options:
     --download-files, -d     <destination>         Download all files from a gist to a given destination folder
              --clone, -c     <destination>         Clone your gist repository to a given repository
               --more, -m                           Get detailed informations about referenced gist
+              --open, -o     [browser]             Open the gist in specified browser (default if browser isn't specified)
 ```
 
 ### Development
@@ -66,7 +67,6 @@ Test User Environment **_process.env_**
 #### TODO
 ```
 TODO:
--  Open a referenced gist on default system browser
 -  Create Gists
 -  Point files to include on gist (fs IO)
 -  Create a version history file
@@ -78,6 +78,7 @@ TODO:
 ```
 ```
 DONE:
+-  Open a referenced gist on default system browser
 -  Get detailed informations about a single gist
 -  Clone gist repository to a local folder
 -  Get details from a single gist

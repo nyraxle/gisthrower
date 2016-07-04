@@ -63,7 +63,7 @@ program
   .option('-m --more', 'Show gist informations/details')
   .option('-c --clone <dest>', 'Clone gist repository to a given destination')
   .option('-d --download-files <dest>', 'Download all gist files to a given destination')
-  .option('-o --open [browser]', 'Open the gist in specified browser (default if browser wasn\'t specified)')
+  .option('-o --open [browser]', 'Open the gist in specified browser (default if browser isn\'t specified)')
   .action((id, options) => {
     resolver.gist.basic(id);
     if (options.more) {
