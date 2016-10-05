@@ -51,8 +51,8 @@ describe('List API', () => {
   });
 
   describe('allFromUser', () => {
-    it('should respond with a chunk of gists from eduardoarnold', (done) => {
-      listApi.fromUser('eduardoarnold')
+    it('should respond with a chunk of gists from nyraxle', (done) => {
+      listApi.fromUser('nyraxle')
         .then((result) => {
           expect(result).to.not.be.null;
           done();
