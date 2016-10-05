@@ -14,8 +14,6 @@ const fs = require('fs');
 const testUserName = process.env.TEST_USER;
 const testToken = process.env.TEST_TOKEN;
 
-console.log(process.env);
-
 describe('Gist API', () => {
   before(function() {
     const filePath = appRoot.path + '\\auth.json';
