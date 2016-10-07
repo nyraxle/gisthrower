@@ -1,6 +1,6 @@
 {
   "name": "gisthrower",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Basic Gist CLI Client",
   "bin": {
     "gisthrower": "./src/cli.js"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eduardoarnold/gisthrower.git"
+    "url": "git+https://github.com/nyraxle/gisthrower.git"
   },
   "keywords": [
     "gist",
@@ -23,9 +23,9 @@
   "author": "Eduardo Arnold <eduardo@radbird.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eduardoarnold/gisthrower/issues"
+    "url": "https://github.com/nyraxle/gisthrower/issues"
   },
-  "homepage": "https://github.com/eduardoarnold/gisthrower#readme",
+  "homepage": "https://github.com/nyraxle/gisthrower#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "codecov": "^1.0.1",
@@ -44,6 +44,7 @@
     "commander": "^2.9.0",
     "download": "^4.4.3",
     "nodegit": "^0.13.0",
+    "open": "0.0.5",
     "q": "^1.4.1",
     "request-promise": "^3.0.0"
   }

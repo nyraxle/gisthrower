@@ -43,7 +43,7 @@ program
   .option('-a, --all', 'List all gists')
   .option('-s --starred', 'List only the starred gists from user')
   .option('-f --from-user <username>', 'List all gists from user')
-  .option('-r --range <from>-<to>', 'List all gists into a given range, based on list displayed gist number', range)
+  .option('-r --range <from>:<to>', 'List all gists into a given range, based on list displayed gist number', range)
   .action((options) => {
     if (options.starred) {
       resolver.list.starred();
@@ -60,14 +60,20 @@ program
   .command('gist <id>')
   .alias('gs')
   .description('Details about a single gist based on his <id>')
-  .option('-d --download-files <dest>', 'Download all gist files to a given destination')
+  .option('-m --more', 'Show gist informations/details')
   .option('-c --clone <dest>', 'Clone gist repository to a given destination')
+  .option('-d --download-files <dest>', 'Download all gist files to a given destination')
+  .option('-o --open [browser]', 'Open the gist in specified browser (default if browser isn\'t specified)')
   .action((id, options) => {
     resolver.gist.basic(id);
-    if (options.downloadFiles) {
-      resolver.gist.downloadFiles(id, options.downloadFiles);
+    if (options.more) {
+      resolver.gist.moreDetails(id);
     } else if (options.clone) {
       resolver.gist.clone(id, options.clone);
+    } else if (options.downloadFiles) {
+      resolver.gist.downloadFiles(id, options.downloadFiles);
+    } else if (options.open) {
+      resolver.gist.open(id, options.open);
     }
   });
 
