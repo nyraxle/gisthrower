@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nyraxle/gisthrower.svg?branch=master)](https://travis-ci.org/nyraxle/gisthrower) [![codecov] (https://codecov.io/gh/eduardoarnold/gisthrower/branch/master/graph/badge.svg)](https://codecov.io/gh/eduardoarnold/gisthrower) [![dependencies Status](https://david-dm.org/nyraxle/gisthrower/status.svg)](https://david-dm.org/nyraxle/gisthrower) [![Node Version](https://img.shields.io/badge/node-5.9.x-blue.svg)]()
+[![Build Status](https://travis-ci.org/nyraxle/gisthrower.svg?branch=master)](https://travis-ci.org/nyraxle/gisthrower) [![codecov] (https://codecov.io/gh/nyraxle/gisthrower/branch/master/graph/badge.svg)](https://codecov.io/gh/nyraxle/gisthrower) [![dependencies Status](https://david-dm.org/nyraxle/gisthrower/status.svg)](https://david-dm.org/nyraxle/gisthrower) [![Node Version](https://img.shields.io/badge/node-5.9.x-blue.svg)]()
 
 
 # Gisthrower - A minimalist CLI to manage gists
